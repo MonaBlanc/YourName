@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sawarabi Mincho";
+}
+
+body::-webkit-scrollbar { display: none; }
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+#Home{
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.85;
+    color: azure;
+}
+
+#Home img{
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 15%;
+}
+
+#Home .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 10%;
+}
+
+#Home h1{
+    font-size: 3.5em;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.45);
+    align-items: end;
+    padding-right: 15px;
+    flex-wrap: wrap-reverse;
+}
+
+#Home h2{
+    font-size: 1.5em;
+    font-weight: lighter;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.5em;
+    padding-top: 2em;
+    padding-right: 15px;
+}
+
+#Home span{
+    padding-top: -15px;
+}
+
+#Home .button{
+    display: flex;
+    justify-content: center;
+}
+
+#Home a{
+
+    transition: all 0.5s ease-out;
+}
+
+#Plot{
+    height: 140vh;
+    background-color: black;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#Plot .logo{
+    padding-top: 15px;
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+#Plot .plot{
+    padding: 20px 100px;
+}
+
+#Plot .plot h1{
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+#Plot .plot p{
+    font-weight: lighter;
+}
+
+#Plot #SlidingTrack{
+    height: 60vh;
+    width: 90vw;
+    background-color: black;
+    margin: 0 6rem;
+    overflow: hidden;
+}
+
+#Plot #SlidingTrack #image-track {
+    display: flex;
+    gap: 5vmin;
+    position: relative;
+    top: 50%;
+    transform: translate(50%, -50%); 
+    user-select: none; 
+  }
+  
+#Plot #SlidingTrack #image-track > .image {
+    width: 25vmin;
+    height: 40vmin;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+#Details{
+    height: 140vh;
+    background-color: black;
+    color: azure;
+    overflow: hidden;
+}
+
+#Details .ribbon{
+    Position: absolute;
+    height: 100%;
+    width: 50px;
+    margin: 0 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#Details .ribbon #Red{
+    Position: absolute;
+    height: 100%;
+    width: 50px;
+    background-color: crimson;
+    margin: 0 90%;
+}
+
+#Details .ribbon #Orange{
+    Position: absolute;
+    height: 60%;
+    width: 50px;
+    background-color: orange;
+    margin: 0 90%;
+}
+
+#Details .ribbon #Blue{
+    Position: absolute;
+    height: 30%;
+    width: 50px;
+    background-color: cornflowerblue;
+    margin: 0 90%;
+}
+
+#Details .ribbon #White{
+    Position: absolute;
+    height: 15%;
+    width: 50px;
+    background-color: white;
+    margin: 0 90%;
+}
+
+#Details .menu-item{
+    display: flex;
+    padding: 20px 100px;
+    text-align: center;
+}
+
+#Details .menu-item h1{
+    font-size: 3.5em;
+    font-weight: lighter;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+#Details .menu-item h2{
+    font-size: 2em;
+    font-weight: lighter;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    /* transform: rotate(270deg); */
+    opacity: .8;
+}
+
+#Details .menu-item .description p{
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 40px;
+    opacity: .8;
+}
+
+#Details .menu-item .description {
+    padding-top: 80px;
+    text-align: center;
+    opacity: .8;
+}
+
+
+#Suggestions {
+    height: 100vh;
+    background-color: black;
+    color: azure;
+    overflow: hidden;
+}
+
+
+
+#Suggestions h1{
+    padding: 40px 100px;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+#Suggestions .movieList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 100px 80px;
+}
+
+
+#Suggestions .movieList .movieItem img{
+    aspect-ratio: 2/3;
+    width: 200px;
+    height: auto;
+}
+
+#Suggestions .footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: space-between;
+
+}
+
