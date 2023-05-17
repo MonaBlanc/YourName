@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Sawarabi Mincho";
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar { display: none; }
@@ -187,13 +188,19 @@ body::-webkit-scrollbar { display: none; }
 }
 
 #Details .menu-item h2{
+    padding-top: 10px;
     font-size: 2em;
     font-weight: lighter;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
     text-align: center;
-    /* transform: rotate(270deg); */
     opacity: .8;
+    transform: translateX(50%) rotate(270deg);
+    white-space: nowrap;
+}
+
+#Details #subtitle{
+    position: absolute;
+    left: -10%;
+    padding-top: 25%;
 }
 
 #Details .menu-item .description p{
