@@ -99,17 +99,109 @@
                             src="https://images-ext-2.discordapp.net/external/vn1vTPJJBkiNucXkIuSgimQnQxMpHARdk7MuxBMQYF4/https/screenmusings.org/movie/blu-ray/Your-Name/images/Your-Name-290.jpg?width=809&height=455" />
                     </div>
                 </div>
-                <!-- <div class="menu-item">
-                        <h1>Fragment of Time</h1>
+                <div class="menu-item" id="OrangeItem">
+                    <h1>Fragment of Time</h1>
+                    <div id="subtitle">
+                        <h2>Ka • Ta • Wa • Re かたわれ時</h2>
                     </div>
-                    <div class="menu-item">
-                        <h1>Luck</h1>
+                    <div class="description">
+                        <p>Kataware means a fragment. Fragment of time. Also, the fragment of the meteor that crashes to
+                            earth in Hida, obliterating Mitsuha’s hometown. Twilight is a fascinating time of day — or
+                            is it night? It is the time between day and night, when it is neither day nor is it night.
+                            It is kure, dusk.
+                            Kure is a border between two things such as light and dark, life and death, between two
+                            instants of time. It is at such a border that all things are possible.</p>
+                        <br>
+                        <img
+                            src="https://c4.wallpaperflare.com/wallpaper/546/703/594/anime-your-name-kimi-no-na-wa-mitsuha-miyamizu-wallpaper-thumb.jpg" />
                     </div>
-                    <div class="menu-item">
-                        <h1>Comet Tiamat</h1>
-                    </div> -->
+                </div>
+                <div class="menu-item" id="BlueItem">
+                    <h1>Luck</h1>
+                    <div id="subtitle">
+                        <h2>Tsui • Te • Ru ついてる</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Women folks in Mitsuha's bloodline have been blessed with the power to swap soul as young
+                            maidens as mentioned by the grandmother. Both she and her daughter (Mitsuha 's mother) went
+                            through strange dreams in their youth. It may have been to specifically warn about this
+                            particular comet with 1200yr orbit that has regularly brought destruction to this region.
+                            And that's exactly what happened. The comet appeared in the sky one day, Mitsuha made a
+                            wish, and the next day she ends up in someone else's body 3 years in the future.
+                        </p>
+                        <br>
+
+                        <img
+                            src="https://c4.wallpaperflare.com/wallpaper/837/691/579/anime-your-name-kimi-no-na-wa-mitsuha-miyamizu-wallpaper-thumb.jpg" />
+                    </div>
+                </div>
+                <div class="menu-item" id="WhiteItem">
+                    <h1>Comet Tiamat</h1>
+                    <div id="subtitle">
+                        <h2>Sui • Sei 彗星</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Itomori's primary water formation, Lake Itomori, was the result of a fragment from Comet
+                            Tiamat crashing into the location of the town 50,200 years prior to the events of the film.
+                            There is an apparently mystical connection between Itomori and Comet Tiamat, one stretching
+                            for potentially thousands of years. As stated in the film, Tiamat possesses an orbital
+                            period of 50,200 years, and the comet has hit the town at least twice (once during the
+                            formation of Lake Itomori, another during the film on October 4, 2013). It is also implied,
+                            due to the size and structure of Goshintai, a large crater, that such a site was formed
+                            through another fragment of Tiamat crashing to the ground below.
+                        </p>
+                        <br>
+
+                        <img
+                            src="https://images-ext-2.discordapp.net/external/cnKQQ3_Hvm1sdd8bDg_YRQCt8bnPdl1lC_sVParq1hE/https/screenmusings.org/movie/blu-ray/Your-Name/images/Your-Name-362.jpg?width=881&height=496" />
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+            const redRibbon = document.getElementById("Red");
+            const orangeRibbon = document.getElementById("Orange");
+            const blueRibbon = document.getElementById("Blue");
+            const whiteRibbon = document.getElementById("White");
+
+            const redItem = document.getElementById("RedItem");
+            const orangeItem = document.getElementById("OrangeItem");
+            const blueItem = document.getElementById("BlueItem");
+            const whiteItem = document.getElementById("WhiteItem");
+
+            redItem.classList.toggle("active");
+
+            redRibbon.addEventListener("click", () => {
+                redItem.classList.toggle("active");
+                orangeItem.classList.remove("active");
+                blueItem.classList.remove("active");
+                whiteItem.classList.remove("active");
+            });
+
+            orangeRibbon.addEventListener("click", () => {
+                redItem.classList.remove("active");
+                orangeItem.classList.toggle("active");
+                blueItem.classList.remove("active");
+                whiteItem.classList.remove("active");
+            });
+
+            blueRibbon.addEventListener("click", () => {
+                redItem.classList.remove("active");
+                orangeItem.classList.remove("active");
+                blueItem.classList.toggle("active");
+                whiteItem.classList.remove("active");
+            });
+
+            whiteRibbon.addEventListener("click", () => {
+                redItem.classList.remove("active");
+                orangeItem.classList.remove("active");
+                blueItem.classList.remove("active");
+                whiteItem.classList.toggle("active");
+            });
+
+        </script>
     </section>
     <section id="Suggestions">
         <div class="container">
@@ -141,64 +233,76 @@
                     <h2>2023</h2>
                 </div>
             </div>
-            <div class="footer">
-                <p>CoMix Wave FILMS</p>
-                <img style="height: 65px; width: auto;"
-                    src="https://www.theaudiodb.com/images/media/artist/logo/radwimps-55ba95e68d532.png"
-                    alt="Radwimps" />
-            </div>
         </div>
     </section>
+    <footer>
+        <p>CoMix Wave FILMS</p>
+        <img style="height: 65px; width: auto;"
+            src="https://www.theaudiodb.com/images/media/artist/logo/radwimps-55ba95e68d532.png" alt="Radwimps" />
+    </footer>
+
+    <style>
+        .slide-transition {
+            transition: transform 0.4s ease;
+        }
+
+        .image-transition {
+            transition: object-position 0.4s ease;
+        }
+    </style>
 
     <script>
         const track = document.getElementById("image-track");
-      
+
         const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
-      
+
         const handleOnUp = () => {
-          track.dataset.mouseDownAt = "0";
-          track.dataset.prevPercentage = track.dataset.percentage;
+            track.dataset.mouseDownAt = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
         }
-      
+
         const handleOnMove = e => {
-          if (track.dataset.mouseDownAt === "0") return;
-      
-          const mouseDelta = (window.innerWidth / 2) - e.clientX,
+            if (track.dataset.mouseDownAt === "0") return;
+
+            const mouseDelta = (window.innerWidth / 2) - e.clientX,
                 maxDelta = window.innerWidth / 2;
-      
-          const percentage = (mouseDelta / maxDelta) * 100,
+
+            const percentage = (mouseDelta / maxDelta) * 100,
                 nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
                 nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 100), -100);
-      
-          track.dataset.percentage = nextPercentage;
-      
-          track.animate({
-            transform: `translateX(${nextPercentage}%) translateY(-50%)`
-          }, { duration: 600, fill: "forwards" });
-      
-          const objectPositionX = nextPercentage < 0 ? `${-nextPercentage}%` : `${100 - nextPercentage}%`;
-          for (const image of track.getElementsByClassName("image")) {
-            image.animate({
-              objectPosition: `${objectPositionX} center`
-            }, { duration: 600, fill: "forwards" });
-          }
+
+            track.dataset.percentage = nextPercentage;
+
+            track.classList.add("slide-transition");
+            track.style.transform = `translateX(${nextPercentage}%) translateY(-50%)`;
+
+            const containerWidth = track.offsetWidth;
+            const imageWidth = track.getElementsByClassName("image")[0].offsetWidth;
+            const containerPercentage = (containerWidth - imageWidth) / containerWidth * 100;
+
+            const objectPositionX = nextPercentage < 0 ? `${nextPercentage * (100 - containerPercentage) / 100}%` : `${nextPercentage * (100 + containerPercentage) / 100}%`;
+            for (const image of track.getElementsByClassName("image")) {
+                image.classList.add("image-transition");
+                image.style.objectPosition = `${objectPositionX} center`;
+            }
         }
-      
+
         /* -- Had to add extra lines for touch events -- */
-      
+
         window.onmousedown = e => handleOnDown(e);
-      
+
         window.ontouchstart = e => handleOnDown(e.touches[0]);
-      
+
         window.onmouseup = e => handleOnUp(e);
-      
+
         window.ontouchend = e => handleOnUp(e.touches[0]);
-      
+
         window.onmousemove = e => handleOnMove(e);
-      
+
         window.ontouchmove = e => handleOnMove(e.touches[0]);
-      </script>
-      
+    </script>
+
+
 </body>
 
 </html>

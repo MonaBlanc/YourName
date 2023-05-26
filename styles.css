@@ -23,7 +23,7 @@ body::-webkit-scrollbar { display: none; }
 }
 
 #Home img{
-    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 15px;
     width: 15%;
 }
@@ -115,8 +115,10 @@ body::-webkit-scrollbar { display: none; }
     gap: 5vmin;
     position: relative;
     top: 50%;
-    transform: translate(50%, -50%); 
+    transform: translate(0%, -50%); 
     user-select: none; 
+    transition: transform 0.4s ease;
+
   }
   
 #Plot #SlidingTrack #image-track > .image {
@@ -124,6 +126,8 @@ body::-webkit-scrollbar { display: none; }
     height: 40vmin;
     object-fit: cover;
     object-position: 50% 50%;
+    transition: object-position 0.4s ease;
+
   }
 
 #Details{
@@ -132,6 +136,13 @@ body::-webkit-scrollbar { display: none; }
     color: azure;
     overflow: hidden;
 }
+
+#Details .ribbon #Red,
+  #Details .ribbon #Orange,
+  #Details .ribbon #Blue,
+  #Details .ribbon #White {
+    cursor: pointer;
+  }
 
 #Details .ribbon{
     Position: absolute;
@@ -175,7 +186,10 @@ body::-webkit-scrollbar { display: none; }
 }
 
 #Details .menu-item{
-    display: flex;
+    display: none;
+}
+#Details .menu-item.active{
+    display: flex !important;
     padding: 20px 100px;
     text-align: center;
 }
@@ -199,8 +213,8 @@ body::-webkit-scrollbar { display: none; }
 
 #Details #subtitle{
     position: absolute;
-    left: -10%;
-    padding-top: 25%;
+    left: -150px;
+    padding-top: 330px;
 }
 
 #Details .menu-item .description p{
@@ -213,9 +227,15 @@ body::-webkit-scrollbar { display: none; }
 }
 
 #Details .menu-item .description {
-    padding-top: 80px;
+    padding: 20px 100px;
     text-align: center;
     opacity: .8;
+}
+
+#Details .menu-item .description img{
+    height: auto;
+    width: 80%;
+    align-self: center;
 }
 
 
@@ -248,12 +268,14 @@ body::-webkit-scrollbar { display: none; }
     height: auto;
 }
 
-#Suggestions .footer{
+footer{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 15px;
     justify-content: space-between;
+    background-color: black;
+    color: azure;
 
 }
 
